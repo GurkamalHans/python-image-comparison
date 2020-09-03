@@ -44,7 +44,6 @@ with open('images.txt') as csv_file:
             start = timeit.default_timer()
             score = round(compare_images(imageA, imageB),2)
             stop = timeit.default_timer()
-            print(f'{row[0]} vs {row[1]}: SSIM: {abs(score - 1)}, elapsed {round(stop - start, 2)}')
             # Adds values to output_array
             output_array.append([row[0], row[1], abs(score - 1), round(stop - start, 2)])
             
